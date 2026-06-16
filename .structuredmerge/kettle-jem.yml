@@ -1,0 +1,33 @@
+project_emoji: "🔐"
+
+ruby:
+  test_minimum: "2.4"
+
+rubygems:
+  name: "omniauth-jwt"
+  entrypoint_require: "omniauth/jwt"
+  namespace: "Omniauth::JWT"
+  min_ruby: "2.2"
+
+shim:
+  replacement_gem: "omniauth-jwt2"
+  replacement_require: "omniauth-jwt2"
+  legacy_requires:
+    - "omniauth/strategies/jwt"
+  version:
+    strategy: shim
+
+templates:
+  root: packaged
+  apply: true
+  profile: shim
+
+defaults:
+  preference: "template"
+  add_template_only_nodes: true
+  freeze_token: "kettle-jem"
+
+tokens:
+  author:
+    name: "Peter H. Boling"
+    email: "floss@galtzo.com"

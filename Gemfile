@@ -1,17 +1,8 @@
-source 'https://rubygems.org'
+# frozen_string_literal: true
 
-# Specify your gem's dependencies in omniauth-jwt.gemspec
+source "https://rubygems.org"
+
+shimmed_gem_path = ENV["KETTLE_JEM_SHIMMED_GEM_PATH"].to_s
+gem "omniauth-jwt2", path: shimmed_gem_path unless shimmed_gem_path.empty?
+
 gemspec
-
-# Development dependencies that rely on Ruby version >=
-# Style
-eval_gemfile "gemfiles/contexts/style.gemfile"
-
-# Coverage
-eval_gemfile "gemfiles/contexts/coverage.gemfile"
-
-# Testing
-eval_gemfile "gemfiles/contexts/testing.gemfile"
-
-# Debug
-eval_gemfile "gemfiles/contexts/debug.gemfile"

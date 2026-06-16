@@ -1,10 +1,3 @@
-# External gems
-require "version_gem"
+# frozen_string_literal: true
 
-# This gem
-require "omniauth/jwt/version"
-require "omniauth/strategies/jwt"
-
-Omniauth::JWT::Version.class_eval do
-  extend VersionGem::Basic
-end
+require "omniauth-jwt2"
