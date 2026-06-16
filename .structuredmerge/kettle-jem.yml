@@ -12,6 +12,7 @@ rubygems:
 shim:
   replacement_gem: "omniauth-jwt2"
   replacement_require: "omniauth-jwt2"
+  replacement_git: "https://github.com/omniauth/omniauth-jwt2.git"
   legacy_requires:
     - "omniauth/strategies/jwt"
   version:
